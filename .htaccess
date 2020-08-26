@@ -1,0 +1,7 @@
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteCond %{HTTP_HOST} ^buildapp.co.za [NC]
+RewriteRule ^(.*)$ https://www.buildapp.co.za/$1 [L,R=301]
